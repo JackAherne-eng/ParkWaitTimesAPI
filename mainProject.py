@@ -26,7 +26,7 @@ def runURL(url):
     response = requests.request("GET", url, headers=headers, data=payload)
     data = json.loads(response.text)
 
-    print(data['rides'])
+    print(data['lands'][0]['rides'])
 
 runURL("https://queue-times.com/parks/4/queue_times.json")
 
